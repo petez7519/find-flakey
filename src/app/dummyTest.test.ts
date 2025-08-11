@@ -20,4 +20,7 @@ describe('Flaky Test Suite', () => {
   it('flaky test 5', () => {
     expect([true, false][Math.floor(Math.random() * 2)]).toBe(true)
   })
+  it('flaky test 6', () => {
+    expect([true, false][Math.floor(Math.random() * 1)]).toBe(true)
+  })
 }) 
