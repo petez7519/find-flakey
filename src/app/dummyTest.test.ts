@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi } from 'vitest'
 
 describe('Flaky Test Suite', () => {
   it('flaky test 1', () => {
@@ -14,6 +14,7 @@ describe('Flaky Test Suite', () => {
   })
 
   it('flaky test 4', () => {
+    vi.spyOn(Math, 'random').mockReturnValue(0.5)
     expect(Math.floor(Math.random() * 3)).toBe(1)
   })
 
